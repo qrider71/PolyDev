@@ -1,7 +1,7 @@
-package com.mre.algos;
+package com.mre.polydev.algos;
 
-import static com.mre.algos.Utils.getIntFromArgs;
-import static com.mre.algos.Utils.measurePerformance;
+import static com.mre.polydev.algos.Utils.getIntFromArgs;
+import static com.mre.polydev.algos.Utils.measurePerformance;
 
 import java.util.BitSet;
 import java.util.LinkedList;

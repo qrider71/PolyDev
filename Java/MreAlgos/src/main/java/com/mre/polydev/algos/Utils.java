@@ -1,4 +1,4 @@
-package com.mre.algos;
+package com.mre.polydev.algos;
 
 import java.util.Optional;
 import java.util.function.Supplier;
