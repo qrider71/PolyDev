@@ -15,5 +15,5 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
-      - run: mvn --file Java/MreAlgos/pom.xml clean package
+      - run: mvn --file Java/pom.xml clean package
         
