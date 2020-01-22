@@ -1,4 +1,4 @@
-package com.mre.algos;
+package com.mre.polydev.algos;
 
 import static org.junit.Assert.assertTrue;
 
@@ -8,8 +8,8 @@ import java.util.function.Supplier;
 
 import org.junit.Test;
 
-import static com.mre.algos.Algos.*;
-import static com.mre.algos.Utils.*;
+import static com.mre.polydev.algos.Algos.*;
+import static com.mre.polydev.algos.Utils.*;
 
 public class AlgosTest {
 
