@@ -18,9 +18,14 @@ public class PrimesRestController {
         return "Hello";
     }
 
-    @GetMapping(value = "/{primesUntil}")
+    @GetMapping(value = "/until/{primesUntil}")
     public List<Integer> getPrimes(@PathVariable("primesUntil") Integer primesUntil) {
         return findPrimes(primesUntil);
+    }
+
+    @GetMapping(value = "/count/{primesUntil}")
+    public Integer getPrimesCount(@PathVariable("primesUntil") Integer primesUntil) {
+        return findPrimes(primesUntil).size();
     }
     
 
