@@ -59,3 +59,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+.DS_Store
+/.build
+/Packages
+*.xcodeproj
+xcuserdata/
+
