@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Implementation of the Sieve of Eratosthenes
+// The implementation only considers odd numbers and marks all non primes as true
 func findPrimes(until:Int) -> [Int] {
     var sieve = Array(repeating: false, count: until)
     var primes = [2]
