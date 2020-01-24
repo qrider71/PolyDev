@@ -16,8 +16,7 @@ import java.util.stream.Stream;
  */
 public class Algos {
     public static void main(final String[] args) {
-        final int primesUntilDefault =  1000 * 1000;
-        
+        final int primesUntilDefault = 100 * 1000 * 1000;
         int primesUntil = getIntFromArgs(args).orElse(primesUntilDefault);
         final int count = measurePerformance(()->findPrimes(primesUntil), 1).size();
         System.out.println("Found " + count + " primes below " + primesUntil);
@@ -31,11 +30,8 @@ public class Algos {
      */
     public static List<Integer> findPrimes(final int n) {
         final var sieve = new boolean[n];
-        for (int i = 4; i < n; i += 2) {
-            sieve[i] = true;
-        }
-        return Stream
-            .iterate(2, t -> t < n, t -> t + 1)
+        final var result = Stream
+            .iterate(3, t -> t < n, t -> t + 2)
             .filter(i -> !sieve[i])
             .peek(i -> {
                 for (long j = (long) i * (long) i; j < n; j += 2 * i) {
@@ -43,6 +39,9 @@ public class Algos {
                 }
             })
             .collect(Collectors.toList());
+
+        result.add(0,2);
+        return result;
     }
 
     /**
@@ -76,11 +75,9 @@ public class Algos {
      */
     public static List<Integer> findPrimesCstyle(final int n) {
         final var sieve = new boolean[n + 1];
-        for (int i = 4; i <= n; i += 2) {
-            sieve[i] = true;
-        }
         final var primes = new LinkedList<Integer>();
-        for (int i = 2; i < n; i++) {
+        primes.add(2);
+        for (int i = 3; i < n; i+=2) {
             if (!sieve[i]) {
                 primes.add(i);
                 for (long j = (long) i * (long) i; j < n; j += 2 * i) {
