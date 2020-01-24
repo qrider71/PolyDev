@@ -20,4 +20,4 @@ jobs:
         env:
           GITHUB_USERNAME: x-access-token
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: mvn --settings ../settings.xml deploy
+        run: mvn --file Java/pom.xml --settings Java/settings.xml deploy
