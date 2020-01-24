@@ -16,9 +16,9 @@ import java.util.stream.Stream;
  */
 public class Algos {
     public static void main(final String[] args) {
-        final int primesUntilDefault = 100 * 1000 * 1000;
+        final int primesUntilDefault =  100 * 1000 * 1000;
         int primesUntil = getIntFromArgs(args).orElse(primesUntilDefault);
-        final int count = measurePerformance(()->findPrimes(primesUntil), 1).size();
+        final int count = measurePerformance(()->findPrimesCstyle(primesUntil), 1).size();
         System.out.println("Found " + count + " primes below " + primesUntil);
     }
 
