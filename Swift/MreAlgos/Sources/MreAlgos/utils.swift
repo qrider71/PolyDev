@@ -11,7 +11,7 @@ func measurePerformance (fn: (Int)->[Int], n:Int) -> ([Int], TimeInterval) {
     let start = Date()
     let result = fn(n)
     let end = Date()
-    let duration = end.timeIntervalSince(start)
+    let duration = end.timeIntervalSince(start) * 1000
     return (result, duration)
 }
 
