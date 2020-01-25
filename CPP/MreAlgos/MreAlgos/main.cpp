@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
     int n = 100*1000*1000;
     if (argc == 2) n = atoi(argv[1]);
     
-    auto primes = measurePerformance(findPrimes, 100000000);
+    auto primes = measurePerformance(findPrimes, n);
     std::cout << "Found " << primes.size() << " primes until " << n << endl;
     return 0;
 }
