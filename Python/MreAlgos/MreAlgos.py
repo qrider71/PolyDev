@@ -1,4 +1,5 @@
 import time
+import sys
 
 def findPrimes(until):
     sieve = [False] * until
@@ -19,7 +20,12 @@ def measurePerformance(fn, n):
     end = getMillis()
     return (result, end-start)
 
+
 n =  100 * 1000 * 1000
+nArgs = len(sys.argv) - 1
+if (nArgs == 1):
+    n = int(sys.argv[1])
+
 (primes, duration) = measurePerformance(findPrimes, n)
 nPrimes = len(primes)
 print (f'Found {nPrimes} primes until {n} in {duration} ms')
