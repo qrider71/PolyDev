@@ -16,4 +16,8 @@ cd CPP
 ./run.sh $1
 cd ..
 
+cd Python
+./run.sh $1
+cd ..
+
 
