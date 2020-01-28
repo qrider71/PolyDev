@@ -1,1 +1,1 @@
-{ image: gitpod/workspace-full }
+{ image: { file: .gitpod.Dockerfile } }
