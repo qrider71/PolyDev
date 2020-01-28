@@ -9,11 +9,13 @@ USER gitpod
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
 
+USER root
 # Install Swift dependencies
 RUN sudo apt-get update -q && \
     sudo apt-get install -yq libtinfo5 libcurl4-openssl-dev libncurses5 && \
     sudo rm -rf /var/lib/apt/lists/*
 
+USER gitpod
 # Install Swift
 RUN mkdir -p /home/gitpod/.swift && \
     cd /home/gitpod/.swift && \
