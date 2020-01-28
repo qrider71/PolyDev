@@ -16,7 +16,7 @@ primesToA m = sieve 3 (array (3,m) [(i,odd i) | i<-[3..m]] :: UArray Int Bool)
 
 runBenchmark :: [string] -> IO ()
 runBenchmark args = do
-  let n = 100000000
+  let n = 100*1000*1000
   start <- getCPUTime
   putStrLn $ show $ length $ primesToA n
   end   <- getCPUTime
