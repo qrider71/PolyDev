@@ -11,6 +11,9 @@ USER gitpod
 
 USER root
 # Install Swift dependencies
+
+RUN touch /etc/MYTEST
+
 RUN apt-get update -q && \
     apt-get install -yq libtinfo5 libcurl4-openssl-dev libncurses5 && \
     rm -rf /var/lib/apt/lists/*
