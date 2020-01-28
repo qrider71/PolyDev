@@ -5,5 +5,6 @@ vscode:
   extensions:
     - Kasik96.swift@0.1.0:Q5PBUv3yxGt0LugfEN0nsg==
     - unpublished.sourcekit-lsp@0.0.1:NJBDyUtdIfPBJcBUYsntWQ==
-tasks:
+    - alanz.vscode-hie-server@0.0.34:jduOUZ6IKUD9eaN0Z0Jn5g==
+- tasks:
 - command: swift --version
