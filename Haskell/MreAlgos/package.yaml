@@ -34,6 +34,7 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -O2
     dependencies:
     - MreAlgos
 
@@ -45,6 +46,5 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    - -O2
     dependencies:
     - MreAlgos

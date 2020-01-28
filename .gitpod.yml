@@ -5,6 +5,10 @@ vscode:
   extensions:
     - Kasik96.swift@0.1.0:Q5PBUv3yxGt0LugfEN0nsg==
     - unpublished.sourcekit-lsp@0.0.1:NJBDyUtdIfPBJcBUYsntWQ==
-    - alanz.vscode-hie-server@0.0.34:jduOUZ6IKUD9eaN0Z0Jn5g==
-- tasks:
+    - alanz.vscode-hie-server@0.0.28:j/YAJtXUGGbb8xSSz1i/CQ==
+    - justusadam.language-haskell@2.6.0:CvYnp3YmQPTuto0m1di+1A==
+    - phoityne.phoityne-vscode@0.0.24:FTkd1r93lYs3z95fjRROAg==
+    - hoovercj.haskell-linter@0.0.6:VpJluXvOyr9Iw7TIKg2Oyg==
+    - dramforever.vscode-ghc-simple@0.1.13:X3A6Dr3LYAP8MxXBh/hb1A==
+tasks:
 - command: swift --version
