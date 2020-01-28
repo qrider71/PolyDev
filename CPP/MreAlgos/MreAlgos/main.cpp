@@ -6,6 +6,8 @@
 //  Copyright © 2020 Markus Reith. All rights reserved.
 //
 
+#include <functional>
+
 #include <iostream>
 #include <vector>
 
