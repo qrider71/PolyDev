@@ -11,9 +11,9 @@ USER gitpod
 
 USER root
 # Install Swift dependencies
-RUN sudo apt-get update -q && \
-    sudo apt-get install -yq libtinfo5 libcurl4-openssl-dev libncurses5 && \
-    sudo rm -rf /var/lib/apt/lists/*
+RUN apt-get update -q && \
+    apt-get install -yq libtinfo5 libcurl4-openssl-dev libncurses5 && \
+    rm -rf /var/lib/apt/lists/*
 
 USER gitpod
 # Install Swift
