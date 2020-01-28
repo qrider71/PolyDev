@@ -1,1 +1,3 @@
-{ image: { file: .gitpod.Dockerfile } }
+image:
+  file: .gitpod.Dockerfile
+
