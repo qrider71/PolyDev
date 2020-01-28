@@ -12,5 +12,8 @@ USER gitpod
 # Install Swift
 RUN mkdir -p /home/gitpod/.swift 
 
+USER root
+
+
 
 
