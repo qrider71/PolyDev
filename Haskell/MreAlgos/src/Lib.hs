@@ -14,13 +14,16 @@ primesToA m = sieve 3 (array (3,m) [(i,odd i) | i<-[3..m]] :: UArray Int Bool)
       | a!p       = sieve (p+2) $ a//[(i,False) | i <- [p*p, p*p+2*p..m]]
       | otherwise = sieve (p+2) a
 
-runBenchmark :: [string] -> IO ()
-runBenchmark args = do
-  let n = 100*1000*1000
-  start <- getCPUTime
-  putStrLn $ show $ length $ primesToA n
-  end   <- getCPUTime
-  let diff = (fromIntegral (end - start)) / (10^9) :: Double
+performBenchmark :: Int -> IO ()
+performBenchmark n = do
+    start <- getCPUTime
+    let count = (length $ primesToA n)
+    end   <- getCPUTime
+    let diff = fromIntegral (end - start) / (10^9) :: Double
+    printf "Computation time: %0.3f ms\n" diff
 
-  printf "Computation time: %0.3f ms\n" diff
-
+runBenchmark :: [String] -> IO ()
+runBenchmark args = case args of
+    [] -> performBenchmark default_count
+    (h:t) -> performBenchmark $ read h
+    where default_count = 100*1000*1000
