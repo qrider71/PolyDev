@@ -4,9 +4,9 @@ USER root
 
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
+# Install haskell ide engine dependencies
 USER gitpod
 
-# Install haskell ide engine dependencies
 RUN sudo apt-get update -q && \
     sudo apt-get install -yq libicu-dev libncurses-dev libgmp-dev && \
     sudo rm -rf /var/lib/apt/lists/*
@@ -19,9 +19,17 @@ RUN cd /home/gitpod && \
     stack ./install.hs hie-8.6.5 && \
     stack ./install.hs data
 
-USER gitpod
+# istall haskell hlint
+RUN cd /home/gitpod && \
+    stack unpack hlint-2.2.9 && \
+    cd hlint-2.2.9 && \
+    stack init && \
+    stack build && \
+    stack install && \
 
 # Install Swift dependencies
+USER gitpod
+
 RUN sudo apt-get update -q && \
     sudo apt-get install -yq libtinfo5 libcurl4-openssl-dev libncurses5 && \
     sudo rm -rf /var/lib/apt/lists/*
@@ -33,3 +41,4 @@ RUN mkdir -p /home/gitpod/.swift && \
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
 ENV PATH="$PATH:/home/gitpod/.stack/programs/x86_64-linux/ghc-tinfo6-8.6.5/bin"
 
+USER root
