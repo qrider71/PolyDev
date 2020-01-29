@@ -13,15 +13,19 @@ RUN sudo apt-get update -q && \
 
 # istall haskell ide engine 
 RUN cd /home/gitpod && \
+    echo "cloning https://github.com/haskell/haskell-ide-engine" && \
     git clone https://github.com/haskell/haskell-ide-engine --recursive && \
     cd haskell-ide-engine && \
+    echo "stack installing hie-8.6.5" && \
     stack ./install.hs hie-8.6.5 && \
     stack ./install.hs data
 
 # istall haskell hlint
 RUN cd /home/gitpod && \
+    echo "stack unpacking hlint-2.2.9" && \
     stack unpack hlint-2.2.9 && \
     cd hlint-2.2.9 && \
+    echo "stack installing hlint-2.2.9" && \
     stack init && \
     stack build && \
     stack install
@@ -36,6 +40,7 @@ RUN sudo apt-get update -q && \
 # Install Swift
 RUN mkdir -p /home/gitpod/.swift && \
     cd /home/gitpod/.swift && \
+    echo "installing SWIFT" && \
     curl -fsSL https://swift.org/builds/swift-5.1-release/ubuntu1804/swift-5.1-RELEASE/swift-5.1-RELEASE-ubuntu18.04.tar.gz | tar -xzv
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
 ENV PATH="$PATH:/home/gitpod/.stack/programs/x86_64-linux/ghc-tinfo6-8.6.5/bin"
