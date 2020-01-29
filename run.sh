@@ -20,4 +20,8 @@ cd Python
 ./run.sh $1
 cd ..
 
+cd Haskell
+./run.sh $1
+cd ..
+
 
