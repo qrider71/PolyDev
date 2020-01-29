@@ -69,5 +69,6 @@ xcuserdata/
 *.lock
 .stack-work
 
-
+*.o
+*.hi
 
