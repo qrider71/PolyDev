@@ -6,6 +6,7 @@ import Data.Array.Unboxed
 import System.CPUTime
 import Text.Printf
 
+primesToA :: Int -> [Int]
 primesToA m = sieve 3 (array (3,m) [(i,odd i) | i<-[3..m]] :: UArray Int Bool)
   where
     sieve :: Int -> UArray Int Bool -> [Int]
