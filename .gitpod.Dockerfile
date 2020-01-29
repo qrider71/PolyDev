@@ -10,8 +10,10 @@ USER gitpod
 RUN sudo apt-get update -q && \
     sudo apt-get install -yq libicu-dev libncurses-dev libgmp-dev && \
     sudo rm -rf /var/lib/apt/lists/*
-    
-RUN git clone https://github.com/haskell/haskell-ide-engine --recursive && \
+
+# istall haskell ide engine 
+RUN cd /home/gitpod && \
+    git clone https://github.com/haskell/haskell-ide-engine --recursive && \
     cd haskell-ide-engine && \
     stack install && \
     stack ./install.hs hie-8.6.5 && \
