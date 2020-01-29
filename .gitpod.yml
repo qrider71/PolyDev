@@ -11,4 +11,5 @@ vscode:
     - hoovercj.haskell-linter@0.0.6:VpJluXvOyr9Iw7TIKg2Oyg==
     - dramforever.vscode-ghc-simple@0.1.13:X3A6Dr3LYAP8MxXBh/hb1A==
 tasks:
+- command: hie-wrapper --lsp &
 - command: swift --version
