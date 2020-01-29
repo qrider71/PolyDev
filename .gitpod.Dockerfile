@@ -18,7 +18,9 @@ RUN cd /home/gitpod && \
     cd haskell-ide-engine && \
     echo "stack installing hie-8.6.5" && \
     stack ./install.hs hie-8.6.5 && \
-    stack ./install.hs data
+    echo "stack installing data" && \
+    stack ./install.hs data && \
+    echo "insalled hie-8.6.5"
 
 # istall haskell hlint
 RUN cd /home/gitpod && \
@@ -28,7 +30,8 @@ RUN cd /home/gitpod && \
     echo "stack installing hlint-2.2.9" && \
     stack init && \
     stack build && \
-    stack install
+    stack install && \
+    echo "installed hlint-2.2.9"
 
 # Install Swift dependencies
 USER gitpod
