@@ -5,6 +5,7 @@ module Lib
 import Data.Array.Unboxed
 import System.CPUTime
 import Text.Printf
+import System.TimeIt
 
 primesToA :: Int -> [Int]
 primesToA m = sieve 3 (array (3,m) [(i,odd i) | i<-[3..m]] :: UArray Int Bool)
@@ -16,12 +17,7 @@ primesToA m = sieve 3 (array (3,m) [(i,odd i) | i<-[3..m]] :: UArray Int Bool)
       | otherwise = sieve (p+2) a
 
 performBenchmark :: Int -> IO ()
-performBenchmark n = do
-    start <- getCPUTime
-    printf "Found %d primes below %d - " (length (primesToA n))  n
-    end   <- getCPUTime
-    let diff = fromIntegral (end - start) / (10^9) :: Double
-    printf "duration: %0.3f ms\n" diff
+performBenchmark n = timeIt $ printf "Found %d primes below %d - " (length (primesToA n))  n
 
 runBenchmark :: [String] -> IO ()
 runBenchmark args = case args of
