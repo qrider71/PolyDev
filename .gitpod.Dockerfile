@@ -45,6 +45,21 @@ RUN mkdir -p /home/gitpod/.swift && \
     cd /home/gitpod/.swift && \
     echo "installing SWIFT" && \
     curl -fsSL https://swift.org/builds/swift-5.1-release/ubuntu1804/swift-5.1-RELEASE/swift-5.1-RELEASE-ubuntu18.04.tar.gz | tar -xzv
+
+# Install DotNetCore
+USER gitpod
+RUN cd /home/gitpod && \
+    echo "Installing dotnet-sdk-3.1" && \
+    wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
+    sudo dpkg -i packages-microsoft-prod.deb && \
+    sudo apt-get update -q && \
+    sudo apt-get install -y -o APT::Install-Suggests=“true” apt-transport-https && \
+    sudo apt-get update -q && \
+    sudo apt-get install -y -o APT::Install-Suggests=“true” dotnet-sdk-3.1 && \
+    sudo apt-get update -q && \
+    sudo apt-get install -y -o APT::Install-Suggests=“true” aspnetcore-runtime-3.1 && \
+    sudo rm -rf /var/lib/apt/lists/*
+
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
 ENV PATH="$PATH:/home/gitpod/.stack/programs/x86_64-linux/ghc-tinfo6-8.6.5/bin"
 
