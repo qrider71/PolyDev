@@ -14,4 +14,8 @@ cd CPP
 ./build.sh
 cd ..
 
+cd Haskell
+./build.sh
+cd ..
+
 
