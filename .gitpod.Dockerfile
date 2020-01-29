@@ -15,7 +15,6 @@ RUN sudo apt-get update -q && \
 RUN cd /home/gitpod && \
     git clone https://github.com/haskell/haskell-ide-engine --recursive && \
     cd haskell-ide-engine && \
-    stack install && \
     stack ./install.hs hie-8.6.5 && \
     stack ./install.hs data
 
