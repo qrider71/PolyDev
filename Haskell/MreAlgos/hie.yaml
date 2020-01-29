@@ -1,6 +1,4 @@
 cradle:
   stack:
-    - path: ./test
-      component: "MreAlgos:test:myTest"
     - path: ./src
       component: "MreAlgos:lib"
