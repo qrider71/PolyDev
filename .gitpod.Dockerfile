@@ -25,7 +25,7 @@ RUN cd /home/gitpod && \
     cd hlint-2.2.9 && \
     stack init && \
     stack build && \
-    stack install && \
+    stack install
 
 # Install Swift dependencies
 USER gitpod
