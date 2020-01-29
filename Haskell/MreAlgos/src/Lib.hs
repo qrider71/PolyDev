@@ -17,13 +17,13 @@ primesToA m = sieve 3 (array (3,m) [(i,odd i) | i<-[3..m]] :: UArray Int Bool)
 performBenchmark :: Int -> IO ()
 performBenchmark n = do
     start <- getCPUTime
-    let count = (length $ primesToA n)
+    printf "Found %d primes below %d - " (length (primesToA n))  n
     end   <- getCPUTime
     let diff = fromIntegral (end - start) / (10^9) :: Double
-    printf "Computation time: %0.3f ms\n" diff
+    printf "duration: %0.3f ms\n" diff
 
 runBenchmark :: [String] -> IO ()
 runBenchmark args = case args of
     [] -> performBenchmark default_count
-    (h:t) -> performBenchmark $ read h
+    (h:_) -> performBenchmark $ read h
     where default_count = 100*1000*1000
