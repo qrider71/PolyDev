@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: cd /Swift/MreAlgos;swift build -v
+      run: cd Swift/MreAlgos;swift build -v
     - name: Run tests
-      run: cd /Swift/MreAlgos;swift test -v
+      run: cd Swift/MreAlgos;swift test -v
