@@ -12,10 +12,11 @@ final class MreAlgosTests: XCTestCase {
             return
         }
 
-        let fooBinary = productsDirectory.appendingPathComponent("MreAlgos 1000")
+        let fooBinary = productsDirectory.appendingPathComponent("MreAlgos")
 
         let process = Process()
         process.executableURL = fooBinary
+        process.arguments = ["1000"]
 
         let pipe = Pipe()
         process.standardOutput = pipe
