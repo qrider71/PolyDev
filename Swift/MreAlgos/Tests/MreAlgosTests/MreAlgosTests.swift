@@ -26,9 +26,8 @@ final class MreAlgosTests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
 
-        XCTAssertEqual(output, "Hello, world!\n")
+        XCTAssertTrue((output?.contains("Found 5761455 primes until 100000000"))!)
     }
-
     /// Returns path to the built products directory.
     var productsDirectory: URL {
       #if os(macOS)
