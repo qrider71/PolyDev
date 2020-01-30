@@ -17,11 +17,11 @@ jobs:
       run: |
         cd Haskell/MreAlgos
         cabal update
-        cabal install --only-dependencies --enable-tests
+        cabal install --only-dependencies
     - name: Build
       run: |
         cd Haskell/MreAlgos
-        cabal configure --enable-tests
+        cabal configure
         cabal build
     - name: Run tests
       run:
