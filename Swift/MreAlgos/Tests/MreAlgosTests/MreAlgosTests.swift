@@ -12,7 +12,7 @@ final class MreAlgosTests: XCTestCase {
             return
         }
 
-        let fooBinary = productsDirectory.appendingPathComponent("MreAlgos")
+        let fooBinary = productsDirectory.appendingPathComponent("MreAlgos 1000")
 
         let process = Process()
         process.executableURL = fooBinary
@@ -26,7 +26,7 @@ final class MreAlgosTests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
 
-        XCTAssertTrue((output?.contains("Found 5761455 primes until 100000000"))!)
+        XCTAssertTrue((output?.contains("Found 168 primes until 1000 in"))!)
     }
     /// Returns path to the built products directory.
     var productsDirectory: URL {
