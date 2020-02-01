@@ -8,6 +8,24 @@ import java.util.function.Supplier;
  */
 public class Utils {
 
+    public static class PerformanceResult <T> {
+        private final long duration;
+        private final T result;
+
+        public PerformanceResult(final long duration, final T result) {
+            this.duration = duration;
+            this.result = result;
+        }
+
+        public long getDuration() {
+            return duration;
+        }
+
+        public T getResult() {
+            return result;
+        }  
+    }
+
     /**
      * Measures the average duration for the specified action in ms.
      * The supplier will be executed multiple times as specified.
@@ -17,7 +35,8 @@ public class Utils {
      * @param repeat number of repetitions
      * @return
      */
-    public static <T> T measurePerformance(Supplier<T> action, int repeat) {
+    public static <T>  PerformanceResult<T> measurePerformance(Supplier<T> action, int repeat) {
+        
         final long start = System.currentTimeMillis();
         T result = null;
         for (int i = 0; i < repeat; i++) {
@@ -25,8 +44,8 @@ public class Utils {
         }
         final long end = System.currentTimeMillis();
         final long duration = (end - start) / repeat;
-        System.out.println("duration [ms]:" + duration);
-        return result;
+        
+        return new PerformanceResult<T>(duration, result);
     }
 
     /**

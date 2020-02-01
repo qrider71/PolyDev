@@ -18,4 +18,7 @@ cd Haskell
 ./build.sh
 cd ..
 
+cd Fsharp
+./build.sh
+cd ..
 

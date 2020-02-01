@@ -36,19 +36,18 @@ vector<int> findPrimes(int until) {
     return primes;
 }
 
-vector<int> measurePerformance(function<vector<int>(int)> fn , int until) {
+pair<vector<int>, uint64_t> measurePerformance(function<vector<int>(int)> fn , int until) {
     auto start = timeSinceEpochMillisec();
     auto result = fn(until);
     auto end = timeSinceEpochMillisec();
-    cout << "Duration: " << end-start << " ms" << endl;
-    return result;
+    return {result, end-start};
 }
 
 int main(int argc, const char * argv[]) {
     int n = 100*1000*1000;
     if (argc == 2) n = atoi(argv[1]);
     
-    auto primes = measurePerformance(findPrimes, n);
-    std::cout << "Found " << primes.size() << " primes until " << n << endl;
+    auto result = measurePerformance(findPrimes, n);
+    std::cout << "C++: Found " << result.first.size() << " primes until " << n << " in " << result.second << " ms" << endl;
     return 0;
 }

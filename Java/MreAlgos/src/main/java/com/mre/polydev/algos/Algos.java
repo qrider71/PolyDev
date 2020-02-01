@@ -17,9 +17,16 @@ import java.util.stream.Stream;
 public class Algos {
     public static void main(final String[] args) {
         final int primesUntilDefault =  100 * 1000 * 1000;
-        int primesUntil = getIntFromArgs(args).orElse(primesUntilDefault);
-        final int count = measurePerformance(()->findPrimesCstyle(primesUntil), 1).size();
-        System.out.println("Found " + count + " primes below " + primesUntil);
+        final int primesUntil = getIntFromArgs(args).orElse(primesUntilDefault);
+        final var performanceResult = measurePerformance(()->findPrimesCstyle(primesUntil), 1);
+        
+        System.out.println("Java: Found " 
+            + performanceResult.getResult().size()
+            + " primes until " 
+            + primesUntil 
+            + " in " 
+            + performanceResult.getDuration() 
+            + " ms");
     }
 
     /**

@@ -34,5 +34,5 @@ let main argv =
     let millis = timer.ElapsedMilliseconds
 
     let primesCount = primes |> Seq.length
-    printfn "Found %i primes below %i in %i [ms]" primesCount m millis
+    printfn "F#: Found %i primes below %i in %i [ms]" primesCount m millis
     0 // return an integer exit code

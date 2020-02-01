@@ -7,4 +7,4 @@ import Foundation
 
 let until = getPrimesUntilFromCommandLine()
 let (res, time) = measurePerformance(fn: findPrimes, n: until)
-print("Found \(res.count) primes until \(until) in \(time) ms")
+print("Swift: Found \(res.count) primes until \(until) in \(time) ms")

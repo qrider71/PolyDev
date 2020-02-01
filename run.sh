@@ -24,4 +24,7 @@ cd Haskell
 ./run.sh $1
 cd ..
 
+cd Fsharp
+./run.sh $1
+cd ..
 

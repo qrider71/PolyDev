@@ -25,6 +25,7 @@ public class AlgosTest {
         var countCorrectFunctions = testFuncs
             .stream()
             .map(f -> measurePerformance(f, 10))
+            .map(f -> f.getResult())
             .map(r -> r.size())
             .filter(n->(n==countPrimesUntil1M))
             .count();
