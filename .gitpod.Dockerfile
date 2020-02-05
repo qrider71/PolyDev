@@ -64,6 +64,21 @@ RUN cd /home/gitpod && \
     sudo apt-get install -y -o APT::Install-Suggests=“true” aspnetcore-runtime-3.1 && \
     sudo rm -rf /var/lib/apt/lists/*
 
+# Install DotNetCore
+USER gitpod
+RUN cd /home/gitpod && \
+    echo "Installing Scala Dotty" && \
+    echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list \
+    curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add \
+    sudo apt-get update \
+    sudo apt-get install sbt \
+    git clone https://github.com/lampepfl/dotty.git \
+    cd dotty \
+    echo "Building Scala Dotty" && \
+    sbt managedSources \
+    echo "Successfully built Scala Dotty" && 
+
+ENV PATH="$PATH:/home/gitpod/dotty/bin"
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
 ENV PATH="$PATH:/home/gitpod/.stack/programs/x86_64-linux/ghc-tinfo6-8.6.5/bin"
 
