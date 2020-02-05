@@ -26,16 +26,16 @@ RUN cd /home/gitpod && \
 
 # istall haskell hlint
 RUN cd /home/gitpod && \
-    echo "stack unpacking hlint-2.2.9" && \
-    stack unpack hlint-2.2.9 && \
-    cd hlint-2.2.9 && \
-    echo "stack installing hlint-2.2.9" && \
+    echo "stack unpacking hlint-2.2.10" && \
+    stack unpack hlint-2.2.10 && \
+    cd hlint-2.2.10 && \
+    echo "stack installing hlint-2.2.10" && \
     stack init && \
     stack build && \
     stack install && \
     cd /home/gitpod && \
-    rm -rf hlint-2.2.9 && \
-    echo "installed hlint-2.2.9"
+    rm -rf hlint-2.2.10 && \
+    echo "installed hlint-2.2.10"
 
 # Install Swift dependencies
 USER gitpod
