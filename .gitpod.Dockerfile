@@ -2,17 +2,6 @@ FROM gitpod/workspace-full
 
 USER root
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        libc6 \
-        libgcc1 \
-        libgssapi-krb5-2 \
-        libicu60 \
-        libssl1.1 \
-        libstdc++6 \
-        zlib1g \
-    && rm -rf /var/lib/apt/lists/*
-
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
 # Install haskell ide engine dependencies
