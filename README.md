@@ -15,13 +15,13 @@ to try how I could solve a particular problem in different languages.
 My favourite languages are
 - Java
 - F#
-- Haskell
 - Scala
+- Haskell
 - Swift
 - Python
 - C++
 
-# How to use this playground
+# How to use this playground online
 The easiest way to play on my playground is to register with gitpot.io
 and open my repository with the link below in the browser based IDE Gitpod.
 
@@ -40,4 +40,11 @@ the build script: ./build.sh
 From the Gitpod IDE open a terminal. From The PolyDev directory simply execeute
 the build script: ./run.sh
 
+# How to use this playground on your local system
+The source code should be independent from your local system. However, the provided
+shell scripts will only work on Unix like systems and MacOS X. To build and run the
+software you need to set up the development environments for the programming languages
+used in this project. The best way is to have a look in the provided Docker file.
 
+# Links
+## Java
