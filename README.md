@@ -36,7 +36,28 @@ For me the main argument for using Java now is the vast amount of (freely) avail
 and stable framework and software components.
 
 ## F#
-F# is mainly a functional programming language derived from the ML family.
+F# is mainly a functional programming language derived from the ML family, in particular OCaml.
+OCaml introduced object oriented concepts into classic functional ML. F# is ideal if you want to code mainly functional but not purely functional. Since Microsoft has become open for other
+platforms, i.e. Linux and provide their .Net framework free of charge (.Net core) F# is an
+interesting alternative.
+
+## Scala
+Scala is a hybrid language derived from Java and functional languages. 
+
+## Haskell
+Haskell is the classic functional programming language coming from an academic background.
+It is a purely functional language used for teaching functional programming concept.
+
+## Swift
+Swift is a modern hybrid language inspired by C# and Haskell. It has been developped by Apple
+replacing Objective-C as main language for iOS and MacOS X. Swift is freely available for all
+major plattforms.
+
+## Python
+Python is a classic interpreted language. 
+
+## C++
+C++ is the classic object-oriented language which inspired most of the recent OO languages
 
 
 # How to use this playground online
