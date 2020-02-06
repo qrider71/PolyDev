@@ -21,6 +21,24 @@ My favourite languages are
 - Python
 - C++
 
+# Some notes about the programming languages
+## Java
+Java is mainly a classic object-oriented programming language inspired by C++. When Java
+came up its main features why it became successful where garbage collection, platform
+independent object code (develop locally and run it anywhere) and the ability to run in
+web browsers (applets). One of the main critism on Java have always been performance concerns.
+Interestingly, those arguments have changed: Platform independence have become almost unimportant with Linux and Docker as prevalent target platforms. Almost all modern languages
+provide sophisticated memory management. Finally the Java applet technology is dead, no one
+uses Java in a web browser, it has been completely replaced with technologies like
+Typscript/Angular. Performance has become less important with powerful backend systems and
+highly scalable service oriented architectures.
+For me the main argument for using Java now is the vast amount of (freely) available, mature
+and stable framework and software components.
+
+## F#
+F# is mainly a functional software derived from the ML family.
+
+
 # How to use this playground online
 The easiest way to play on my playground is to register with gitpot.io
 and open my repository with the link below in the browser based IDE Gitpod.
@@ -48,9 +66,19 @@ used in this project. The best way is to have a look in the provided Docker file
 
 # Links
 ## Java
+- https://openjdk.java.net/
 ## F#
+- https://fsharp.org/
 ## Scala
+- https://www.scala-lang.org/
+- https://dotty.epfl.ch/
 ## Haskell
+- https://www.haskell.org/
 ## Swift
+- https://docs.swift.org/
+- https://developer.apple.com/swift/
 ## Python
+- https://www.python.org/
 ## C++
+- https://isocpp.org/
+
