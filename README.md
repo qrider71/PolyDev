@@ -36,7 +36,7 @@ For me the main argument for using Java now is the vast amount of (freely) avail
 and stable framework and software components.
 
 ## F#
-F# is mainly a functional software derived from the ML family.
+F# is mainly a functional programming language derived from the ML family.
 
 
 # How to use this playground online
