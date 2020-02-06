@@ -15,6 +15,5 @@ def findPrimes(n:Int) : Seq[Int] = {
 
   var a = Array.fill(n) {true}
   for (i <- 4 until n-1 by 2) a(i) = false
-  
   return sieve (3, a)
 }

@@ -1,8 +1,10 @@
 import org.junit.Test
 import org.junit.Assert._
+import com.mre.polydev.algos.findPrimes
 
 class Test1 {
   @Test def t1(): Unit = {
-    assertEquals("I was compiled by dotty :)", Main.msg)
+    val countPrimes1000:Int=168
+    assertTrue(findPrimes(1000).length==countPrimes1000)
   }
 }
