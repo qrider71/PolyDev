@@ -2,6 +2,17 @@ FROM gitpod/workspace-full
 
 USER root
 
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        libc6 \
+        libgcc1 \
+        libgssapi-krb5-2 \
+        libicu60 \
+        libssl1.1 \
+        libstdc++6 \
+        zlib1g \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
 # Install haskell ide engine dependencies
@@ -78,3 +89,8 @@ ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
 ENV PATH="$PATH:/home/gitpod/.stack/programs/x86_64-linux/ghc-tinfo6-8.6.5/bin"
 
 USER root
+
+ENV \
+    DOTNET_RUNNING_IN_CONTAINER=true \
+    DOTNET_USE_POLLING_FILE_WATCHER=true \
+    NUGET_XMLDOC_MODE=skip
