@@ -18,9 +18,15 @@ let findPrimes m =
     for i in 4 .. 2 .. (m-1) do a.[i] <- false
     sieve (3, a)
 
+let measurePerformance(f, p) =
+    let timer = System.Diagnostics.Stopwatch()
+    timer.Start()
+    let result = f(p)
+    let millis = timer.ElapsedMilliseconds
+    (result,millis)
+
 [<EntryPoint>]
 let main argv =
-    let timer = System.Diagnostics.Stopwatch()
     let mDefault = 100 * 1000 * 1000
     let m = 
         match argv with 
@@ -28,11 +34,7 @@ let main argv =
         | [|x|] -> x |> int
         | _ -> mDefault
 
-    timer.Start()
-    let primes = findPrimes(m)
-
-    let millis = timer.ElapsedMilliseconds
-
+    let (primes, millis) = measurePerformance(findPrimes, m)
     let primesCount = primes |> Seq.length
     printfn "F#: Found %i primes below %i in %i ms" primesCount m millis
     0 // return an integer exit code

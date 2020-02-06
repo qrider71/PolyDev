@@ -28,3 +28,6 @@ cd Fsharp
 ./run.sh $1
 cd ..
 
+cd Scala
+./run.sh $1
+cd ..
