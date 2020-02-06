@@ -75,3 +75,6 @@ xcuserdata/
 **/bin/**
 **/obj/***
 **/.ionide/***
+
+**/.dotty-ide.json
+Scala/MreAlgos/.dotty-ide.json
