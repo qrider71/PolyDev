@@ -18,7 +18,7 @@ public class Algos {
     public static void main(final String[] args) {
         final int primesUntilDefault =  100 * 1000 * 1000;
         final int primesUntil = getIntFromArgs(args).orElse(primesUntilDefault);
-        final var performanceResult = measurePerformance(()->findPrimesCstyle(primesUntil), 1);
+        final var performanceResult = measurePerformance(()->findPrimes(primesUntil), 1);
         
         System.out.println("Java: Found " 
             + performanceResult.getResult().size()

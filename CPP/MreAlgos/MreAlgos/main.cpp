@@ -14,11 +14,6 @@
 #include <chrono>
 #include <cstdint>
 
-uint64_t timeSinceEpochMillisec() {
-    using namespace std::chrono;
-    return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
-}
-
 using namespace std;
 
 vector<int> findPrimes(int until) {
@@ -34,6 +29,11 @@ vector<int> findPrimes(int until) {
         }
     }
     return primes;
+}
+
+uint64_t timeSinceEpochMillisec() {
+    using namespace std::chrono;
+    return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
 }
 
 pair<vector<int>, uint64_t> measurePerformance(function<vector<int>(int)> fn , int until) {
