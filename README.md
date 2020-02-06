@@ -48,3 +48,9 @@ used in this project. The best way is to have a look in the provided Docker file
 
 # Links
 ## Java
+## F#
+## Scala
+## Haskell
+## Swift
+## Python
+## C++
