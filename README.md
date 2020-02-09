@@ -1,9 +1,11 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/qrider71/PolyDev) 
 
 # PolyDev
+
 My personal playground for polyglot programming with different languages and frameworks
 
 # Disclaimer
+
 Here I test different programming concepts. In my professional career as software engineer
 I have been working with Java since it came up with version 1.0.2. However, I am fascinated
 by the concepts of functional programming. The past developments in Java and othe OO languages have shown that more and more functional concepts find there way into the traditional object oriented world. Whatever I provide here is not intentended for production usage. The code might
@@ -12,9 +14,11 @@ exist better algorithms than those I have implemented. As said I am mainly playi
 to try how I could solve a particular problem in different languages.
 
 # Programming languages used in this repository
+
 My favourite languages are
+
 - Java
-- F#
+- F# (F sharp)
 - Scala
 - Haskell
 - Swift
@@ -22,7 +26,9 @@ My favourite languages are
 - C++
 
 # Some notes about the programming languages
+
 ## Java
+
 Java is mainly a classic object-oriented programming language inspired by C++. When Java
 came up its main features why it became successful where garbage collection, platform
 independent object code (develop locally and run it anywhere) and the ability to run in
@@ -35,32 +41,38 @@ highly scalable service oriented architectures.
 For me the main argument for using Java now is the vast amount of (freely) available, mature
 and stable framework and software components.
 
-## F#
+## F# (F sharp)
+
 F# is mainly a functional programming language derived from the ML family, in particular OCaml.
 OCaml introduced object oriented concepts into classic functional ML. F# is ideal if you want to code mainly functional but not purely functional. Since Microsoft has become open for other
 platforms, i.e. Linux and provide their .Net framework free of charge (.Net core) F# is an
 interesting alternative.
 
 ## Scala
+
 Scala is a hybrid language derived from Java and functional languages. 
 
 ## Haskell
+
 Haskell is the classic functional programming language coming from an academic background.
 It is a purely functional language used for teaching functional programming concept.
 
 ## Swift
+
 Swift is a modern hybrid language inspired by C# and Haskell. It has been developped by Apple
 replacing Objective-C as main language for iOS and MacOS X. Swift is freely available for all
 major plattforms.
 
 ## Python
+
 Python is a classic interpreted language. 
 
 ## C++
+
 C++ is the classic object-oriented language which inspired most of the recent OO languages
 
-
 # How to use this playground online
+
 The easiest way to play on my playground is to register with gitpot.io
 and open my repository with the link below in the browser based IDE Gitpod.
 
@@ -72,34 +84,50 @@ required on your local system, the remote system provides all required dependenc
 All you need is a normal web browser.
 
 ## How to build the software
+
 From the Gitpod IDE open a terminal. From The PolyDev directory simply execeute
 the build script: ./build.sh
 
 ## How to run the software
+
 From the Gitpod IDE open a terminal. From The PolyDev directory simply execeute
 the build script: ./run.sh
 
 # How to use this playground on your local system
+
 The source code should be independent from your local system. However, the provided
 shell scripts will only work on Unix like systems and MacOS X. To build and run the
 software you need to set up the development environments for the programming languages
 used in this project. The best way is to have a look in the provided Docker file.
 
 # Links
-## Java
+
+## Java links
+
 - https://openjdk.java.net/
-## F#
+
+## F# links
+
 - https://fsharp.org/
-## Scala
+
+## Scala links
+
 - https://www.scala-lang.org/
 - https://dotty.epfl.ch/
-## Haskell
+
+## Haskell links
+
 - https://www.haskell.org/
-## Swift
+
+## Swift links
+
 - https://docs.swift.org/
 - https://developer.apple.com/swift/
-## Python
-- https://www.python.org/
-## C++
-- https://isocpp.org/
 
+## Python links
+
+- https://www.python.org/
+
+## C++ links
+
+- https://isocpp.org/
