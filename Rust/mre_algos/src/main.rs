@@ -1,4 +1,5 @@
-use std::time::Instant;    
+use std::time::Instant;
+use std::env;    
 
 fn find_primes(n:usize) -> Vec<usize> {
     let mut a = vec![false; n];
@@ -16,11 +17,17 @@ fn find_primes(n:usize) -> Vec<usize> {
 }
 
 fn main() {
-    let n = 100*1000*1000;
+    let n_default = 100*1000*1000;
+
+    let args: Vec<String> = env::args().collect();
+    let n = match args.as_slice() {
+        [_fist, second] => second.parse().unwrap_or(n_default),
+        _ => n_default
+    };
+
     let start = Instant::now();
     let primes = find_primes(n);
-    let elapsed = start.elapsed();
-    let duration = elapsed.as_millis();
+    let duration = start.elapsed().as_millis();
     let count = primes.len();
 
     println!("Rust: Found {} primes below {} in {} ms", count, n, duration);

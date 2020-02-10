@@ -1,5 +1,5 @@
 [package]
-name = "MreAlgos"
+name = "mre_algos"
 version = "0.1.0"
 authors = ["Markus Reith <mreith@gmx.net>"]
 edition = "2018"

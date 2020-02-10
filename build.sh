@@ -14,6 +14,10 @@ cd CPP
 ./build.sh
 cd ..
 
+cd Rust
+./build.sh
+cd ..
+
 cd Haskell
 ./build.sh
 cd ..
