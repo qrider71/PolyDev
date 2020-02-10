@@ -37,5 +37,5 @@ let main argv =
 
     let (primes, millis) = measurePerformance(findPrimes, m)
     let primesCount = primes |> Seq.length
-    printfn "F#: Found %i primes below %i in %i ms" primesCount m millis
+    printfn "F# (recursive): Found %i primes below %i in %i ms" primesCount m millis
     0 // return an integer exit code

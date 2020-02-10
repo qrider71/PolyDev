@@ -11,7 +11,7 @@ object Main {
 
     val (primes, time) = measurePerformance(findPrimes, n)
     val count = primes.length
-    println (s"Scala: Found $count primes below $n in $time ms" )
+    println (s"Scala (recursive): Found $count primes below $n in $time ms" )
   }
 
   def msg = "I was compiled by dotty :)"

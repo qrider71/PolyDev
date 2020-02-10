@@ -21,4 +21,4 @@ runBenchmark args = case args of
     (head:_) -> performBenchmark $ read head
     where 
         default_count = 100*1000*1000
-        performBenchmark n = timeIt $ printf "Haskell: Found %d primes below %d - " (length (findPrimes n))  n
+        performBenchmark n = timeIt $ printf "Haskell (recursive): Found %d primes below %d - " (length (findPrimes n))  n
