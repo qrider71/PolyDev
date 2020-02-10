@@ -1,0 +1,15 @@
+name: Rust
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: cd Rust/mre_algos;cargo build --verbose
+    - name: Run tests
+      run: cd Rust/mre_algos;cargo test --verbose
