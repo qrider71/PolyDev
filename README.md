@@ -23,6 +23,7 @@ My favourite languages are
 - Haskell
 - Swift
 - Python
+- Rust
 - C++
 
 # Some notes about the programming languages
@@ -65,7 +66,11 @@ major plattforms.
 
 ## Python
 
-Python is a classic interpreted language. 
+Python is a classic interpreted language.
+
+## Rust
+
+Rust is a multi-pardadigm programming language developped by Mozilla Research. Rust has a strong focus on memory and concurrency safety. Rust is well known for its very good runtime performance which is comparable to C++.
 
 ## C++
 
@@ -127,6 +132,10 @@ used in this project. The best way is to have a look in the provided Docker file
 ## Python links
 
 - https://www.python.org/
+
+## Rust links
+
+- https://www.rust-lang.org/
 
 ## C++ links
 
