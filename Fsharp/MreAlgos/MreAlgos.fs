@@ -3,19 +3,20 @@
 open System
 
 let findPrimes m =
+    let maxIndex = m-1
 
     let filterSieve (p:int, a:bool[]) =
-        for i in seq { p*p .. 2*p .. (m-1) } do a.[i] <- false
+        for i in p*p .. 2*p .. maxIndex do a.[i] <- false
         a
 
     let rec sieve (p:int, a:bool[]) = 
         match (p,a) with
-        | (p,a) when p * p > m -> seq { for i in 2 .. (m-1) do if a.[i] then yield i}
-        | (p,a) when a.[p]  -> sieve ( (p+2), filterSieve (p, a) ) 
-        | _ -> sieve ((p+2), a)
+        | (p,a) when p * p > maxIndex -> seq { for i in 2 .. maxIndex do if a.[i] then yield i}
+        | (p,a) when a.[p]  -> sieve (p+2, filterSieve (p, a) ) 
+        | _ -> sieve (p+2, a)
    
     let a = Array.create m true
-    for i in 4 .. 2 .. (m-1) do a.[i] <- false
+    for i in 4 .. 2 .. maxIndex do a.[i] <- false
     sieve (3, a)
 
 let measurePerformance(f, p) =
