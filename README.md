@@ -105,6 +105,24 @@ shell scripts will only work on Unix like systems and MacOS X. To build and run 
 software you need to set up the development environments for the programming languages
 used in this project. The best way is to have a look in the provided Docker file.
 
+# Performance Comparison 
+
+ |**1,00E+06**|**1,00E+07**|**1,00E+08**|**1,00E+09**
+-----|-----|-----|-----|-----
+Java|43|128|1101|14523
+Kotlin (rec)|138|724|6568|Out of Memory
+Swift|7|75|881|12420
+C++|2|27|316|4381
+Rust|3|43|547|9240
+Rust (rec)|3|44|575|9914
+Python|121|1404|14933|168021
+Haskel (rec)|20|270|3380|132940
+F#|20|184|1099|13240
+F# (rec)|27|120|1274|16037
+Scala (rec)|83|343|2486|Out of Memory
+
+
+
 # Links
 
 ## Java links
