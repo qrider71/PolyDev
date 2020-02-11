@@ -26,16 +26,16 @@ RUN cd /home/gitpod && \
 
 # istall haskell hlint
 RUN cd /home/gitpod && \
-    echo "stack unpacking hlint-2.2.10" && \
-    stack unpack hlint-2.2.10 && \
-    cd hlint-2.2.10 && \
-    echo "stack installing hlint-2.2.10" && \
+    echo "stack unpacking hlint-2.2.11" && \
+    stack unpack hlint-2.2.11 && \
+    cd hlint-2.2.11 && \
+    echo "stack installing hlint-2.2.11" && \
     stack init && \
     stack build && \
     stack install && \
     cd /home/gitpod && \
-    rm -rf hlint-2.2.10 && \
-    echo "installed hlint-2.2.10"
+    rm -rf hlint-2.2.11 && \
+    echo "installed hlint-2.2.11"
 
 # Install Swift dependencies
 USER gitpod
@@ -78,6 +78,11 @@ USER gitpod
 RUN cd /home/gitpod && \
     echo "Installing Rust" && \
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+# Install Kotlin
+USER gitpod
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
+             && sdk install kotlin"
 
 ENV PATH="$PATH:/home/gitpod/dotty/bin"
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
