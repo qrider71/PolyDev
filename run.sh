@@ -8,6 +8,10 @@ cd Java
 ./run.sh $1
 cd ..
 
+cd Kotlin
+./run.sh $1
+cd ..
+
 cd Swift
 ./run.sh $1
 cd ..

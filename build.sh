@@ -6,6 +6,10 @@ cd Java
 ./build.sh
 cd ..
 
+cd Kotlin
+./build.sh
+cd ..
+
 cd Swift
 ./build.sh
 cd ..
