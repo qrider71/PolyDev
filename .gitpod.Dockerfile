@@ -81,13 +81,14 @@ RUN cd /home/gitpod && \
 
 USER gitpod
 RUN cd /home/gitpod && \
-    echo "Installing SDKMan" && \
-    curl -s https://get.sdkman.io | bash
+    echo "Installing SDKMan & Kotlin" && \
+    curl -s https://get.sdkman.io | bash && \
+    /home/gitpod/.sdkman/bin/sdk install kotlin
 
 # USER gitpod
 # RUN cd /home/gitpod && \
 #     echo "Installing Kotlin" && \
-#     sdk install kotlin
+#     /home/gitpod/.sdkman/bin/sdk install kotlin
 
 ENV PATH="$PATH:/home/gitpod/dotty/bin"
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
