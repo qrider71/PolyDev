@@ -107,7 +107,7 @@ used in this project. The best way is to have a look in the provided Docker file
 
 # Performance Comparison 
 
- |**1,00E+06**|**1,00E+07**|**1,00E+08**|**1,00E+09**
+ Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
 Java|43|128|1101|14523
 Kotlin (rec)|138|724|6568|Out of Memory
