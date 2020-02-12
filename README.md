@@ -110,7 +110,8 @@ used in this project. The best way is to have a look in the provided Docker file
  Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
 Java|43|128|1101|14523
-Kotlin (rec)|138|724|6568|Out of Memory
+Kotlin|118|633|6096|Out of Memory
+Kotlin (rec)|116|688|6276|Out of Memory
 Swift|7|75|881|12420
 C++|2|27|316|4381
 Rust|3|43|547|9240
