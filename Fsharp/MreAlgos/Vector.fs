@@ -1,6 +1,10 @@
 module Vector
 
-type Vector<'T> (elements: array<'T>, add':'T -> 'T -> 'T, sub':'T -> 'T -> 'T, mul':'T -> 'T -> 'T, div':'T -> 'T -> 'T) =
+type Vector<'T when 'T:comparison> (elements: array<'T>, 
+                    add':'T -> 'T -> 'T, 
+                    sub':'T -> 'T -> 'T, 
+                    mul':'T -> 'T -> 'T, 
+                    div':'T -> 'T -> 'T) =
     member this.v : array<'T> = elements
 
     static member (+) (v1: Vector<'T>, v2: Vector<'T>) = v1.add(v2)
@@ -23,8 +27,7 @@ type Vector<'T> (elements: array<'T>, add':'T -> 'T -> 'T, sub':'T -> 'T -> 'T, 
     member this.div (c:'T) = Vector(this._cdiv (this.v, c), add',sub', mul', div')
     member private this._cdiv (v1, c) = Array.map (div' c) v1 
 
-    static member maxAbs<'TT when 'TT:comparison>(v:'TT array) =
-        Array.maxBy(fun x->x*x)
+    member this.maxAbs() = Array.maxBy(fun x->x*x, this.v)
 
 let inline vec elements = 
   Vector(elements, (+),(-),(*),(/))
