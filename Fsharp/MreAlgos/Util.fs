@@ -2,7 +2,7 @@ module Util
 
 open System
 
-let measurePerformance (f, p) =
+let measurePerformance f p =
     let timer = System.Diagnostics.Stopwatch()
     timer.Start()
     let result = f (p)

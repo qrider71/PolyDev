@@ -13,12 +13,12 @@ let main argv =
         | [|x|] -> x |> int
         | _ -> mDefault
 
-    let (primesNR, millisNR) = measurePerformance(findPrimesNonRec, m)
+    let (primesNR, millisNR) = measurePerformance findPrimesNonRec m
     let primesCountNR = primesNR |> Seq.length
 
     printfn "F#: Found %i primes below %i in %i ms" primesCountNR m millisNR
 
-    let (primes, millis) = measurePerformance(findPrimes, m)
+    let (primes, millis) = measurePerformance findPrimes m
     let primesCount = primes |> Seq.length
 
     printfn "F# (recursive): Found %i primes below %i in %i ms" primesCount m millis
