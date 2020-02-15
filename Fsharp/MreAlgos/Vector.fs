@@ -1,7 +1,7 @@
 module Vector
 
-type Vector<'T>(elements: array<'T>, add':'T -> 'T -> 'T, sub':'T -> 'T -> 'T, mul':'T -> 'T -> 'T, div':'T -> 'T -> 'T) =
-    member this.v = elements
+type Vector<'T> (elements: array<'T>, add':'T -> 'T -> 'T, sub':'T -> 'T -> 'T, mul':'T -> 'T -> 'T, div':'T -> 'T -> 'T) =
+    member this.v : array<'T> = elements
 
     static member (+) (v1: Vector<'T>, v2: Vector<'T>) = v1.add(v2)
     member this.add (v:Vector<'T>) = Vector(this._add (this.v, v.v), add',sub', mul', div')
@@ -22,6 +22,9 @@ type Vector<'T>(elements: array<'T>, add':'T -> 'T -> 'T, sub':'T -> 'T -> 'T, m
     static member (/) (v: Vector<'T>, c: 'T) = v.div(c)
     member this.div (c:'T) = Vector(this._cdiv (this.v, c), add',sub', mul', div')
     member private this._cdiv (v1, c) = Array.map (div' c) v1 
+
+    static member maxAbs<'TT when 'TT:comparison>(v:'TT array) =
+        Array.maxBy(fun x->x*x)
 
 let inline vec elements = 
   Vector(elements, (+),(-),(*),(/))
