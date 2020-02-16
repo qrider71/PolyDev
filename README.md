@@ -138,6 +138,7 @@ Scala (rec)|83|343|2486|Out of Memory
 
 - https://www.scala-lang.org/
 - https://dotty.epfl.ch/
+- http://www.scalanlp.org/
 
 ## Haskell links
 

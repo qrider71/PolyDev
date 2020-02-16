@@ -6,7 +6,7 @@ open Vector
 
 [<EntryPoint>]
 let main argv =
-    let mDefault = 100
+    let mDefault = 100 * 1000 * 1000
     let m = 
         match argv with 
         | [||] -> mDefault
@@ -23,13 +23,4 @@ let main argv =
 
     printfn "F# (recursive): Found %i primes below %i in %i ms" primesCount m millis
 
-    let a = Frac(11,5)
-    let b = Frac(1,5)
-    let c = a-b
-    printfn "%A" c
-
-    let v1:Vector<int> = vec [|1;2;3;4|]
-    let v2:Vector<int> = vec [|5;6;7;8|]
-    let v3 = v1.add (v2)
-    printfn "%A" v3.v.[0]
     0 // return an integer exit code
