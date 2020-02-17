@@ -12,4 +12,4 @@ function es(n::Int64) # accepts one 64 bit integer argument
      return filter(x -> isprime[x], 1:n) # filter using anonymous function
 end
 
-@time es(1000000000)
+@time es(100000000)
