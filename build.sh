@@ -30,3 +30,7 @@ cd Fsharp
 ./build.sh
 cd ..
 
+cd ScalaNative
+./build.sh
+cd ..
+
