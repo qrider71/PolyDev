@@ -89,13 +89,15 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
 
 
 # Install Julia
-# RUN mkdir -p /home/gitpod/.julia && \
-#    cd /home/gitpod/.julia && \
-#    echo "installing Julia" && \
-#    curl -skfL -o julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.3/julia-1.3.1-linux-x86_64.tar.gz | tar -xzv
-    
-# RUN cd /home/gitpod/.julia && \
-#    rm -rf julia.tar.gz
+RUN mkdir -p /home/gitpod/.julia && \
+    cd /home/gitpod/.julia && \
+    echo "installing Julia" && \
+    curl -skfL -o julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.3/julia-1.3.1-linux-x86_64.tar.gz && \
+    gzip -d gzip -d julia.tar.gz && \
+    tar -xvf julia.tar
+
+RUN cd /home/gitpod/.julia && \
+    rm -rf julia.tar
 
 
 ENV PATH="$PATH:/home/gitpod/dotty/bin"
