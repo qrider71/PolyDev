@@ -8,6 +8,7 @@ RUN curl -sSL https://get.haskellstack.org/ | sh
 USER gitpod
 
 RUN sudo apt-get update -q && \
+    sudo apt-get install -yq apt-utils && \
     sudo apt-get install -yq libicu-dev libncurses-dev libgmp-dev && \
     sudo apt-get install -yq clang libunwind-dev && \
     sudo apt-get install -yq libgc-dev libre2-dev && \
