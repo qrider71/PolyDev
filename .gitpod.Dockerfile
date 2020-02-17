@@ -8,7 +8,10 @@ RUN curl -sSL https://get.haskellstack.org/ | sh
 USER gitpod
 
 RUN sudo apt-get update -q && \
+    sudo apt-get install -yq apt-utils && \
     sudo apt-get install -yq libicu-dev libncurses-dev libgmp-dev && \
+    sudo apt-get install -yq clang libunwind-dev && \
+    sudo apt-get install -yq libgc-dev libre2-dev && \
     sudo rm -rf /var/lib/apt/lists/*
 
 # istall haskell ide engine 
@@ -73,7 +76,7 @@ RUN cd /home/gitpod && \
     sudo apt-get update && \
     sudo apt-get install sbt
 
-# Install Scala Dotty
+# Install Rust
 USER gitpod
 RUN cd /home/gitpod && \
     echo "Installing Rust" && \
@@ -84,9 +87,23 @@ USER gitpod
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
              && sdk install kotlin"
 
+
+# Install Julia
+RUN mkdir -p /home/gitpod/.julia && \
+    cd /home/gitpod/.julia && \
+    echo "installing Julia" && \
+    curl -skfL -o julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.3/julia-1.3.1-linux-x86_64.tar.gz && \
+    gzip -d julia.tar.gz && \
+    tar -xvf julia.tar
+
+RUN cd /home/gitpod/.julia && \
+    rm -rf julia.tar
+
+
 ENV PATH="$PATH:/home/gitpod/dotty/bin"
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
 ENV PATH="$PATH:/home/gitpod/.stack/programs/x86_64-linux/ghc-tinfo6-8.6.5/bin"
+ENV PATH="$PATH:/home/gitpod/.julia/julia-1.3.1/bin"
 
 USER root
 

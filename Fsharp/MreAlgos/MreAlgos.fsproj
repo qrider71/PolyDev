@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Util.fs" />
+    <Compile Include="Primes.fs" />
+    <Compile Include="Frac.fs" />
+    <Compile Include="Vector.fs" />
     <Compile Include="MreAlgos.fs" />
   </ItemGroup>
 

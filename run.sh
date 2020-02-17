@@ -39,3 +39,7 @@ cd ..
 cd Scala
 ./run.sh $1
 cd ..
+
+cd ScalaNative
+./run.sh $1
+cd ..
