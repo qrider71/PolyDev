@@ -87,9 +87,18 @@ USER gitpod
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
              && sdk install kotlin"
 
+
+# Install Julia
+RUN mkdir -p /home/gitpod/.julia && \
+    cd /home/gitpod/.julia && \
+    echo "installing Julia" && \
+    curl -skfL -o julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/1.3/julia-1.3.1-linux-x86_64.tar.gz | tar -xzv
+
+
 ENV PATH="$PATH:/home/gitpod/dotty/bin"
 ENV PATH="$PATH:/home/gitpod/.swift/swift-5.1-RELEASE-ubuntu18.04/usr/bin"
 ENV PATH="$PATH:/home/gitpod/.stack/programs/x86_64-linux/ghc-tinfo6-8.6.5/bin"
+ENV PATH="$PATH:/home/gitpod/.julia/julia-1.3.1/bin"
 
 USER root
 
