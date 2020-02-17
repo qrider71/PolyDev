@@ -10,7 +10,7 @@ USER gitpod
 RUN sudo apt-get update -q && \
     sudo apt-get install -yq libicu-dev libncurses-dev libgmp-dev && \
     sudo apt-get install -yq clang libunwind-dev && \
-    sudo apt-get install -yw libgc-dev libre2-dev && \
+    sudo apt-get install -yq libgc-dev libre2-dev && \
     sudo rm -rf /var/lib/apt/lists/*
 
 # istall haskell ide engine 
