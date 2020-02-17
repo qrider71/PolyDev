@@ -122,8 +122,7 @@ F#|20|184|1099|13240
 F# (rec)|27|120|1274|16037
 Scala (rec)|83|343|2486|Out of Memory
 Scala Native (rec)|6|67|805|11250
-
-
+Julia|4|110|999|13215
 
 # Links
 
