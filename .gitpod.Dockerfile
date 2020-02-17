@@ -9,6 +9,8 @@ USER gitpod
 
 RUN sudo apt-get update -q && \
     sudo apt-get install -yq libicu-dev libncurses-dev libgmp-dev && \
+    sudo apt install clang libunwind-dev && \
+    sudo apt install libgc-dev libre2-dev && \
     sudo rm -rf /var/lib/apt/lists/*
 
 # istall haskell ide engine 
@@ -73,7 +75,7 @@ RUN cd /home/gitpod && \
     sudo apt-get update && \
     sudo apt-get install sbt
 
-# Install Scala Dotty
+# Install Rust
 USER gitpod
 RUN cd /home/gitpod && \
     echo "Installing Rust" && \
