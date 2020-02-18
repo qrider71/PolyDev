@@ -2,7 +2,7 @@ FROM gitpod/workspace-full
 
 USER root
 
-RUN curl -sSL https://get.haskellstack.org/ | sh
+RUN curl -k -sSL https://get.haskellstack.org/ | sh
 
 # Install haskell ide engine dependencies
 USER gitpod
@@ -51,7 +51,7 @@ RUN sudo apt-get update -q && \
 RUN mkdir -p /home/gitpod/.swift && \
     cd /home/gitpod/.swift && \
     echo "installing SWIFT" && \
-    curl -fsSL https://swift.org/builds/swift-5.1-release/ubuntu1804/swift-5.1-RELEASE/swift-5.1-RELEASE-ubuntu18.04.tar.gz | tar -xzv
+    curl -k -fsSL https://swift.org/builds/swift-5.1-release/ubuntu1804/swift-5.1-RELEASE/swift-5.1-RELEASE-ubuntu18.04.tar.gz | tar -xzv
 
 # Install DotNetCore
 USER gitpod
@@ -72,7 +72,7 @@ USER gitpod
 RUN cd /home/gitpod && \
     echo "Installing Scala Dotty" && \
     echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list && \
-    curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add  && \
+    curl -k -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add  && \
     sudo apt-get update && \
     sudo apt-get install sbt
 
@@ -80,7 +80,7 @@ RUN cd /home/gitpod && \
 USER gitpod
 RUN cd /home/gitpod && \
     echo "Installing Rust" && \
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    curl -k --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install Kotlin
 USER gitpod
