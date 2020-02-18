@@ -43,3 +43,7 @@ cd ..
 cd ScalaNative
 ./run.sh $1
 cd ..
+
+cd Julia
+./run.sh $1
+cd ..
