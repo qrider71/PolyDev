@@ -108,6 +108,8 @@ used in this project. The best way is to have a look in the provided Docker file
 
 # Performance Comparison 
 
+(MacBook Pro, mid 2015, 2,5 GHz Quad-Core Intel Core i7, 16 GB RAM)
+
  Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
 Java|43|128|1101|14523
