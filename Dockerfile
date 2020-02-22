@@ -13,33 +13,7 @@ RUN sudo apt-get update -q && \
     sudo apt-get install -yq clang libunwind-dev && \
     sudo apt-get install -yq libgc-dev libre2-dev && \
     sudo rm -rf /var/lib/apt/lists/*
-
-# istall haskell ide engine 
-RUN cd /home/gitpod && \
-    echo "cloning https://github.com/haskell/haskell-ide-engine" && \
-    git clone https://github.com/haskell/haskell-ide-engine --recursive && \
-    cd haskell-ide-engine && \
-    echo "stack installing hie-8.6.5" && \
-    stack ./install.hs hie-8.6.5 && \
-    echo "stack installing data" && \
-    stack ./install.hs data && \
-    cd /home/gitpod && \
-    rm -rf haskell-ide-engine && \
-    echo "insalled hie-8.6.5"
-
-# istall haskell hlint
-RUN cd /home/gitpod && \
-    echo "stack unpacking hlint-2.2.11" && \
-    stack unpack hlint-2.2.11 && \
-    cd hlint-2.2.11 && \
-    echo "stack installing hlint-2.2.11" && \
-    stack init && \
-    stack build && \
-    stack install && \
-    cd /home/gitpod && \
-    rm -rf hlint-2.2.11 && \
-    echo "installed hlint-2.2.11"
-
+    
 # Install Swift dependencies
 USER gitpod
 
