@@ -26,6 +26,7 @@ My favourite languages are
 - Rust
 - C++
 - Julia
+- Typescript
 
 # Some notes about the programming languages
 
