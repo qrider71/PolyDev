@@ -1,1 +1,3 @@
-dist/**/*
+**/dist/**/*
+**/dist/app.js.map
+**/dist/app.js
