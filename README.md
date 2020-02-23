@@ -127,6 +127,8 @@ Scala (rec)|83|343|2486|Out of Memory
 Scala Native (rec)|6|67|805|11250
 Scala Native (C style)|4|48|516|8787
 Julia|26|65|546|8204
+Typescript|20|150|Out of Memory|Out of Memory
+Typescript (rec)|20|154|ut of Memory|Out of Memory
 
 # Links
 
