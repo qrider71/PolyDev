@@ -3,6 +3,7 @@ import express from 'express';
 const app = express();
 const port = 3000;
 app.get('/', (req, res) => {
+  console.log("Sending response")
   res.send('The sedulous hyena ate the antelope!');
 });
 app.listen(port, err => {

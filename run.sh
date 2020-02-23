@@ -47,3 +47,7 @@ cd ..
 cd Julia
 ./run.sh $1
 cd ..
+
+cd Typescript
+./run.sh $1
+cd ..

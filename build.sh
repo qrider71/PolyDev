@@ -30,7 +30,15 @@ cd Fsharp
 ./build.sh
 cd ..
 
+cd Scala
+./run.sh 10
+cd ..
+
 cd ScalaNative
 ./build.sh
+cd ..
+
+cd Typescript
+./run.sh 10
 cd ..
 

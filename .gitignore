@@ -79,3 +79,7 @@ xcuserdata/
 **/.dotty-ide.json
 Scala/MreAlgos/.dotty-ide.json
 ScalaNative/scala-native/*.hnir
+
+Typescript/Node/dist/**
+Typescript/Node/dist/app.js.map
+Typescript/Node/dist/app.js
