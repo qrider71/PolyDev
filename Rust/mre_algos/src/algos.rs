@@ -10,7 +10,7 @@ pub fn find_primes(n: usize) -> Vec<usize> {
             }
         }
     }
-    return primes;
+    primes
 }
 
 // recursive implementation to test tail recusion optimization
@@ -20,7 +20,7 @@ pub fn find_primes_rec(n: usize) -> Vec<usize> {
             a.iter()
                 .skip(2)
                 .enumerate()
-                .filter(|(_i, x)| **x == true)
+                .filter(|(_i, x)| **x)
                 .map(|(i, _x)| i)
                 .collect()
         } else if a[p] {
@@ -36,5 +36,5 @@ pub fn find_primes_rec(n: usize) -> Vec<usize> {
     for i in (4..n - 1).step_by(2) {
         a[i] = false;
     }
-    return sieve(n - 1, 3, &mut a);
+    sieve(n - 1, 3, &mut a)
 }

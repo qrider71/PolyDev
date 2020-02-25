@@ -1,7 +1,7 @@
 use std::env;
 
-mod util;
 mod algos;
+mod util;
 
 fn main() {
     let n_default = 100 * 1000 * 1000;
