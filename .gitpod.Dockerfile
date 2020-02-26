@@ -80,7 +80,8 @@ RUN cd /home/gitpod && \
 USER gitpod
 RUN cd /home/gitpod && \
     echo "Installing Rust" && \
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    curl -k --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \
+    /home/gitpod/.cargo/bin/cargo install perftacho
 
 # Install Kotlin
 USER gitpod

@@ -54,12 +54,8 @@ RUN cd /home/gitpod && \
 USER gitpod
 RUN cd /home/gitpod && \
     echo "Installing Rust" && \
-    curl -k --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-
-USER gitpod
-RUN cd /home/gitpod && \
-    echo "PerfTacho from Markus Reith" && \
-    cargo install perftacho
+    curl -k --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \
+    /home/gitpod/.cargo/bin/cargo install perftacho
 
 # Install Kotlin
 USER gitpod
