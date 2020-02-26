@@ -1,6 +1,10 @@
 image:
   file: .gitpod.Dockerfile
 
+tasks:
+  - command: cargo install perftacho
+    name: InstallPerftacho
+    
 vscode:
   extensions:
     - Kasik96.swift@0.1.0:Q5PBUv3yxGt0LugfEN0nsg==
