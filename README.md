@@ -113,23 +113,23 @@ used in this project. The best way is to have a look in the provided Docker file
 
  Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
-Java|43|128|1101|14523
-Kotlin|118|633|6096|Out of Memory
-Kotlin (rec)|116|688|6276|Out of Memory
-Swift|7|75|881|12420
-C++|2|27|316|4381
-Rust|3|43|547|9240
-Rust (rec)|3|44|575|9914
-Python|121|1404|14933|168021
-Haskel (rec)|20|270|3380|132940
-F#|20|184|1099|13240
-F# (rec)|27|120|1274|16037
-Scala (rec)|83|343|2486|Out of Memory
-Scala Native (rec)|6|67|805|11250
-Scala Native (C style)|4|48|516|8787
-Julia|26|65|546|8204
-Typescript|20|148|32646|Out of Memory
-Typescript (rec)|20|148|40218|Out of Memory
+Java|43|126|1123|14523
+Kotlin|126|679|6675|Out of Memory
+Kotlin (rec)|116|739|6031|Out of Memory
+Swift|7|75|871|12420
+C++|3|26|317|4381
+Rust|3|41|549|9240
+Rust (rec)|3|43|582|9914
+Python|123|1366|14958|168021
+Haskel (rec)|26|281|3349|132940
+F#|20|184|1073|13240
+F# (rec)|26|124|1258|16037
+Scala (rec)|104|351|2446|Out of Memory
+Scala Native (C style)|6|55|631|8787
+Scala Native (rec)|6|61|667|11250
+Julia|28|66|592|8204
+Typescript|20|147|33602|Out of Memory
+Typescript (rec)|19|148|39069|Out of Memory
 
 # Links
 

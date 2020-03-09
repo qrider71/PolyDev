@@ -39,6 +39,6 @@ cd ScalaNative
 cd ..
 
 cd Typescript
-./run.sh 10
+./build_run.sh 10
 cd ..
 
