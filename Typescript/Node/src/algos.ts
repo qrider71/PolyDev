@@ -6,14 +6,14 @@ let primes = findPrimes(n)
 let stopTS = Date.now()
 let duration = stopTS - startTS
 let primesCount = primes.length
-console.log(`Typescript: Found ${primes.length} primes until ${n} in ${duration}ms`)
+console.log(`Typescript: Found ${primes.length} primes until ${n} in [${duration} ms]`)
 
 let startRecTS = Date.now()
 let primesRec = findPrimesRec(n);
 let stopRecTS = Date.now()
 let durationRec = stopRecTS - startRecTS
 let primesRecCount = primesRec.length
-console.log(`Typescript (rec): Found ${primesRec.length} primes until ${n} in ${durationRec}ms`)
+console.log(`Typescript (rec): Found ${primesRec.length} primes until ${n} in [${durationRec}ms]`)
 
 
 function findPrimes(n: number): Array<number> {

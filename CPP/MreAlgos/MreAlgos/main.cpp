@@ -48,6 +48,6 @@ int main(int argc, const char * argv[]) {
     if (argc == 2) n = atoi(argv[1]);
     
     auto result = measurePerformance(findPrimes, n);
-    std::cout << "C++: Found " << result.first.size() << " primes until " << n << " in " << result.second << " ms" << endl;
+    std::cout << "C++: Found " << result.first.size() << " primes until " << n << " in [" << result.second << " ms]" << endl;
     return 0;
 }

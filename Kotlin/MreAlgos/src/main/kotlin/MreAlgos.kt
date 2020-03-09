@@ -45,10 +45,10 @@ fun main(args: Array<String>) {
 
     val (resultNR, durationNR) = measurePerformance(::findPrimesNonRec, n)
     val countNR = resultNR.size
-    println("Kotlin: Found $countNR primes below $n in $durationNR ms")
+    println("Kotlin: Found $countNR primes below $n in [$durationNR ms]")
 
     val (result, duration) = measurePerformance(::findPrimes, n)
     val count = result.size
-    println("Kotlin (recursive): Found $count primes below $n in $duration ms")
+    println("Kotlin (recursive): Found $count primes below $n in [$duration ms]")
 }
 

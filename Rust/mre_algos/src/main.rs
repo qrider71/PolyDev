@@ -15,13 +15,13 @@ fn main() {
     let (primes, duration) = util::measure_performance(algos::find_primes, n);
     let (primes_rec, duration_rec) = util::measure_performance(algos::find_primes_rec, n);
     println!(
-        "Rust: Found {} primes below {} in {} ms",
+        "Rust: Found {} primes below {} in [{} ms]",
         primes.len(),
         n,
         duration
     );
     println!(
-        "Rust (recursive): Found {} primes below {} in {} ms",
+        "Rust (recursive): Found {} primes below {} in [{} ms]",
         primes_rec.len(),
         n,
         duration_rec

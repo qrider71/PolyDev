@@ -46,4 +46,4 @@ endTime = Dates.now()
 duration = endTime - startTime
 count = size(primes)[1]
 
-println("Julia: Found $count primes until $n in $duration")
+println("Julia: Found $count primes until $n in [$duration]")

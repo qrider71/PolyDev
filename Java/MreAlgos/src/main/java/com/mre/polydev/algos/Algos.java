@@ -24,9 +24,9 @@ public class Algos {
             + performanceResult.getResult().size()
             + " primes until " 
             + primesUntil 
-            + " in " 
+            + " in [" 
             + performanceResult.getDuration() 
-            + " ms");
+            + " ms]");
     }
 
     /**

@@ -28,5 +28,5 @@ if (nArgs == 1):
 
 (primes, duration) = measurePerformance(findPrimes, n)
 nPrimes = len(primes)
-print (f'Python: Found {nPrimes} primes until {n} in {duration} ms')
+print (f'Python: Found {nPrimes} primes until {n} in [{duration} ms]')
 
