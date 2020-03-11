@@ -8,16 +8,16 @@ My personal playground for polyglot programming with different languages and fra
 
 Here I test different programming concepts. In my professional career as software engineer
 I have been working with Java since it came up with version 1.0.2. However, I am fascinated
-by the concepts of functional programming. The past developments in Java and othe OO languages
+by the concepts of functional programming. The past developments in Java and other OO languages
 have shown that more and more functional concepts find there way into the traditional object
-oriented world. Whatever I provide here is not intentended for production usage. The code might
+oriented world. Whatever I provide here is not intentioned for production usage. The code might
 change frequently and will be staying alpha version forever. I am also very aware that there might
 exist better algorithms than those I have implemented. As said I am mainly playing around here
 to try how I could solve a particular problem in different languages.
 
 # Programming languages used in this repository
 
-My favourite languages are
+My favorite languages are
 
 - Java
 - F# (F sharp)
@@ -37,12 +37,12 @@ My favourite languages are
 Java is mainly a classic object-oriented programming language inspired by C++. When Java
 came up its main features why it became successful were garbage collection, platform
 independent object code (develop locally and run it anywhere) and the ability to run in
-web browsers (applets). One of the main critism on Java have always been performance concerns.
+web browsers (applets). One of the main criticism on Java have always been performance concerns.
 Interestingly, those arguments have changed: Platform independence have become almost unimportant 
 with Linux and Docker as prevalent target platforms. Almost all modern languages
 provide sophisticated memory management. Finally the Java applet technology is dead, no one
 uses Java in a web browser, it has been completely replaced with web technologies like
-Typscript/Angular. Performance has become less important with powerful backend systems and
+Typescript/Angular. Performance has become less important with powerful backend systems and
 highly scalable service oriented architectures.
 For me the main argument for using Java now is the vast amount of (freely) available, mature
 and stable framework and software components.
@@ -56,7 +56,7 @@ interesting alternative.
 
 ## Scala
 
-Scala is a hybrid language derived from Java and functional languages. 
+Scala is a hybrid language derived from Java and functional languages.
 
 ## Haskell
 
@@ -65,7 +65,7 @@ It is a purely functional language used for teaching functional programming conc
 
 ## Swift
 
-Swift is a modern hybrid language inspired by C# and Haskell. It has been developped by Apple
+Swift is a modern hybrid language inspired by C# and Haskell. It has been developed by Apple
 replacing Objective-C as main language for iOS and MacOS X. Swift is freely available for all
 major plattforms.
 
@@ -75,16 +75,22 @@ Python is a classic interpreted language.
 
 ## Rust
 
-Rust is a multi-pardadigm programming language developped by Mozilla Research. Rust has a strong focus on memory and concurrency safety. Rust is well known for its very good runtime performance which is comparable to C++.
+Rust is a multi-paradigm programming language developed by Mozilla Research. Rust has a strong focus on memory and concurrency safety. Rust is well known for its very good runtime performance which is comparable to C++.
 
 ## C++
 
 C++ is the classic object-oriented language which inspired most of the recent OO languages
 
+## Julia
+
+Julia comes from the scientific programming background.
+
+## Typescript
+
 # How to use this playground online
 
 The easiest way to play on my playground is to register with gitpot.io
-and open my repository with the link below in the browser based IDE Gitpod.
+and open my repository with the link below in the browser based IDE GitPod.
 
 https://gitpod.io/#https://github.com/qrider71/PolyDev
 
@@ -95,12 +101,12 @@ All you need is a normal web browser.
 
 ## How to build the software
 
-From the Gitpod IDE open a terminal. From The PolyDev directory simply execeute
+From the GitPod IDE open a terminal. From The PolyDev directory simply execute
 the build script: ./build.sh
 
 ## How to run the software
 
-From the Gitpod IDE open a terminal. From The PolyDev directory simply execeute
+From the GitPod IDE open a terminal. From The PolyDev directory simply execute
 the build script: ./run.sh
 
 # How to use this playground on your local system
@@ -124,7 +130,7 @@ C++|3|26|317|4381
 Rust|3|41|549|9240
 Rust (rec)|3|43|582|9914
 Python|123|1366|14958|168021
-Haskel (rec)|26|281|3349|132940
+Haskell (rec)|26|281|3349|132940
 F#|20|184|1073|13240
 F# (rec)|26|124|1258|16037
 Scala (rec)|104|351|2446|Out of Memory
