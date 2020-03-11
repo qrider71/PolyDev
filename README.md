@@ -128,6 +128,8 @@ used in this project. The best way is to have a look in the provided Docker file
 
 (MacBook Pro, mid 2015, 2,5 GHz Quad-Core Intel Core i7, 16 GB RAM)
 
+## The algorithm
+
 This performance comparison is based on the algorithm "Sieve of Eratosthenes" for
 computing prime numbers (see <https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes> ).
 For several programming languages two algorithms are provided: a classic algorithm using loops
@@ -142,16 +144,13 @@ of 2. The next prime number for the next iteration is the next number which come
 prime number (2) and which is not crossed out: This is 3. It now crosses out 6,9,12,15,18,21 ... n.
 It can be shown that the actual crossing out process for a prime number p can start with p*p since
 all multiples of p before p*p has been crossed out in iterations before. So for the prime number
-3 the algorithms crosses out 9,12,15,18,21 ... n. 6 was already crossed out in the previous iteration.
+3 the algorithms crosses out 9,12,15,18,21 ... n. Number 6 was already crossed out in the previous iteration.
 Next number after 3 is 4 but 4 has been crossed out. So for the next iteration the algorithm takes 5
-as prime number and crosses out 25,30,35,40, ..., n. Also here we see that the multiples 10 and 15 has
+as prime number and crosses out 25,30,35,40, ..., n. Also here we see that the multiples 10 and 15 have
 been crossed out in the iteration for 2 and 3. The algorithms for crossing out end when p*p>n, i.e.
 the first number to be crossed out would exceed the array length. After having crossed out all multiples
 of primes only the primes are left and we can create a list of prime numbers by adding all array indices
 to the list where the value is true (i.e. not crossed out)
-
-
-
 
  Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
