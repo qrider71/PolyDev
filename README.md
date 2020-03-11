@@ -152,7 +152,11 @@ the first number to be crossed out would exceed the array length. After having c
 of primes only the primes are left and we can create a list of prime numbers by adding all array indices
 to the list where the value is true (i.e. not crossed out)
 
- Iterations (10^n)|6|7|8|9
+The table below lists the execution time in milliseconds for each programming language and implementation style.
+The execution time is listed for different array sizes n, i.e. maximum number for which all prime numbers
+below shall be computed.
+
+Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
 Java|43|126|1123|14523
 Kotlin|126|679|6675|Out of Memory
@@ -172,6 +176,14 @@ Julia|28|66|592|8204
 Typescript|20|147|33602|Out of Memory
 Typescript (rec)|19|148|39069|Out of Memory
 
+# Results
+
+## Recursive vs. non-recursive implementations
+
+A recursive implementation only makes sense for programming languages which provide so called
+tail recursion optimization. Without this feature, for each recursion call a context frame will be
+put on the stack causing the stack to grow enormously. The program would quickly fail with
+an out of memory error.
 
 # Links
 
