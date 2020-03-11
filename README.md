@@ -38,7 +38,7 @@ Java is mainly a classic object-oriented programming language inspired by C++. W
 came up its main features why it became successful were garbage collection, platform
 independent object code (develop locally and run it anywhere) and the ability to run in
 web browsers (applets). One of the main criticism on Java have always been performance concerns.
-Interestingly, those arguments have changed: Platform independence have become almost unimportant 
+Interestingly, those arguments have changed: Platform independence have become almost unimportant
 with Linux and Docker as prevalent target platforms. Almost all modern languages
 provide sophisticated memory management. Finally the Java applet technology is dead, no one
 uses Java in a web browser, it has been completely replaced with web technologies like
@@ -50,7 +50,8 @@ and stable framework and software components.
 ## F# (F sharp)
 
 F# is mainly a functional programming language derived from the ML family, in particular OCaml.
-OCaml introduced object oriented concepts into classic functional ML. F# is ideal if you want to code mainly functional but not purely functional. Since Microsoft has become open for other
+OCaml introduced object oriented concepts into classic functional ML. F# is ideal if you want to
+code mainly functional but not purely functional. Since Microsoft has become open for other
 platforms, i.e. Linux and provide their .Net framework free of charge (.Net core) F# is an
 interesting alternative.
 
@@ -67,7 +68,7 @@ It is a purely functional language used for teaching functional programming conc
 
 Swift is a modern hybrid language inspired by C# and Haskell. It has been developed by Apple
 replacing Objective-C as main language for iOS and MacOS X. Swift is freely available for all
-major plattforms.
+major platforms.
 
 ## Python
 
@@ -83,9 +84,16 @@ C++ is the classic object-oriented language which inspired most of the recent OO
 
 ## Julia
 
-Julia comes from the scientific programming background.
+Julia comes from the scientific programming background. It is strongly inspired by MatLab. It comes with
+build-in algorithms for basic number crunching problems, in particular linear algebra.
+It's main focus is on performance. It uses the LLVM compiler for generating native code, Julia can
+also easily interface with C code for further performance optimizations.
 
 ## Typescript
+
+Typescript started as a replacement for JavaScript in web browsers providing the missing type system in JavaScript.
+Typescript compiles to JavaScript so still is an interpreted language. With NodeJS a server side implementation for
+executing TypeScript has become available.
 
 # How to use this playground online
 
