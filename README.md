@@ -100,7 +100,7 @@ executing TypeScript has become available.
 The easiest way to play on my playground is to register with gitpot.io
 and open my repository with the link below in the browser based IDE GitPod.
 
-https://gitpod.io/#https://github.com/qrider71/PolyDev
+<https://gitpod.io/#https://github.com/qrider71/PolyDev>
 
 The IDE accesses a remote docker container which is set up for software
 development is several programming languages. There are no further installations
@@ -124,9 +124,12 @@ shell scripts will only work on Unix like systems and MacOS X. To build and run 
 software you need to set up the development environments for the programming languages
 used in this project. The best way is to have a look in the provided Docker file.
 
-# Performance Comparison 
+# Performance Comparison
 
 (MacBook Pro, mid 2015, 2,5 GHz Quad-Core Intel Core i7, 16 GB RAM)
+
+This performance comparison is based on the algorithm "Sieve of Eratosthenes" for
+computing prime numbers (see <https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes> ).
 
  Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
@@ -153,35 +156,43 @@ Typescript (rec)|19|148|39069|Out of Memory
 
 ## Java links
 
-- https://openjdk.java.net/
+- <https://openjdk.java.net/>
 
 ## F# links
 
-- https://fsharp.org/
+- <https://fsharp.org/>
 
 ## Scala links
 
-- https://www.scala-lang.org/
-- https://dotty.epfl.ch/
-- http://www.scalanlp.org/
+- <https://www.scala-lang.org/>
+- <https://dotty.epfl.ch/>
+- <http://www.scalanlp.org/>
 
 ## Haskell links
 
-- https://www.haskell.org/
+- <https://www.haskell.org/>
 
 ## Swift links
 
-- https://docs.swift.org/
-- https://developer.apple.com/swift/
+- <https://docs.swift.org/>
+- <https://developer.apple.com/swift/>
 
 ## Python links
 
-- https://www.python.org/
+- <https://www.python.org/>
 
 ## Rust links
 
-- https://www.rust-lang.org/
+- <https://www.rust-lang.org/>
 
 ## C++ links
 
-- https://isocpp.org/
+- <https://isocpp.org/>
+
+## Julia links
+
+- <https://julialang.org/>
+
+## TypeScript links
+
+- <https://www.typescriptlang.org/>
