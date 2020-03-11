@@ -130,6 +130,28 @@ used in this project. The best way is to have a look in the provided Docker file
 
 This performance comparison is based on the algorithm "Sieve of Eratosthenes" for
 computing prime numbers (see <https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes> ).
+For several programming languages two algorithms are provided: a classic algorithm using loops
+and aa recursive implementation to test tail recursion optimization.
+
+Basically, the algorithms filters a boolean array and crosses out non-prime numbers.
+It starts with an array which is initialized with all indices set to true (or false depending
+on the definition). It iteratively crosses out all multiples of prime numbers so that only primes are
+left over. Each iteration leeds to the next prime number for which its multiple will be crossed out.
+It starts with 2 as first prime number and crosses out 4,6,8,10,12,14,16,18,20 ... n as multiples
+of 2. The next prime number for the next iteration is the next number which comes after the current
+prime number (2) and which is not crossed out: This is 3. It now crosses out 6,9,12,15,18,21 ... n.
+It can be shown that the actual crossing out process for a prime number p can start with p*p since
+all multiples of p before p*p has been crossed out in iterations before. So for the prime number
+3 the algorithms crosses out 9,12,15,18,21 ... n. 6 was already crossed out in the previous iteration.
+Next number after 3 is 4 but 4 has been crossed out. So for the next iteration the algorithm takes 5
+as prime number and crosses out 25,30,35,40, ..., n. Also here we see that the multiples 10 and 15 has
+been crossed out in the iteration for 2 and 3. The algorithms for crossing out end when p*p>n, i.e.
+the first number to be crossed out would exceed the array length. After having crossed out all multiples
+of primes only the primes are left and we can create a list of prime numbers by adding all array indices
+to the list where the value is true (i.e. not crossed out)
+
+
+
 
  Iterations (10^n)|6|7|8|9
 -----|-----|-----|-----|-----
