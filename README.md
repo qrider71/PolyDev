@@ -8,8 +8,10 @@ My personal playground for polyglot programming with different languages and fra
 
 Here I test different programming concepts. In my professional career as software engineer
 I have been working with Java since it came up with version 1.0.2. However, I am fascinated
-by the concepts of functional programming. The past developments in Java and othe OO languages have shown that more and more functional concepts find there way into the traditional object oriented world. Whatever I provide here is not intentended for production usage. The code might
-change frequently and will be stay alpha version forever. I am also very aware that there might
+by the concepts of functional programming. The past developments in Java and othe OO languages
+have shown that more and more functional concepts find there way into the traditional object
+oriented world. Whatever I provide here is not intentended for production usage. The code might
+change frequently and will be staying alpha version forever. I am also very aware that there might
 exist better algorithms than those I have implemented. As said I am mainly playing around here
 to try how I could solve a particular problem in different languages.
 
@@ -33,12 +35,13 @@ My favourite languages are
 ## Java
 
 Java is mainly a classic object-oriented programming language inspired by C++. When Java
-came up its main features why it became successful where garbage collection, platform
+came up its main features why it became successful were garbage collection, platform
 independent object code (develop locally and run it anywhere) and the ability to run in
 web browsers (applets). One of the main critism on Java have always been performance concerns.
-Interestingly, those arguments have changed: Platform independence have become almost unimportant with Linux and Docker as prevalent target platforms. Almost all modern languages
+Interestingly, those arguments have changed: Platform independence have become almost unimportant 
+with Linux and Docker as prevalent target platforms. Almost all modern languages
 provide sophisticated memory management. Finally the Java applet technology is dead, no one
-uses Java in a web browser, it has been completely replaced with technologies like
+uses Java in a web browser, it has been completely replaced with web technologies like
 Typscript/Angular. Performance has become less important with powerful backend systems and
 highly scalable service oriented architectures.
 For me the main argument for using Java now is the vast amount of (freely) available, mature
@@ -130,6 +133,7 @@ Scala Native (rec)|6|61|667|11250
 Julia|28|66|592|8204
 Typescript|20|147|33602|Out of Memory
 Typescript (rec)|19|148|39069|Out of Memory
+
 
 # Links
 
