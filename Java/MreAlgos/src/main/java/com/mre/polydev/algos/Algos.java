@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 
 /**
  * This class provides various algorithms
+ * 
  *
  * @author Markus Reith
  */
