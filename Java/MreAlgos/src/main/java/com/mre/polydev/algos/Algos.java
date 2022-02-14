@@ -3,35 +3,33 @@ package com.mre.polydev.algos;
 import static com.mre.polydev.algos.Utils.getIntFromArgs;
 import static com.mre.polydev.algos.Utils.measurePerformance;
 
-import java.util.BitSet;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
  * This class provides various algorithms
- * 
+ *
  * @author Markus Reith
  */
 public class Algos {
     public static void main(final String[] args) {
         final int primesUntilDefault =  100 * 1000 * 1000;
         final int primesUntil = getIntFromArgs(args).orElse(primesUntilDefault);
-        final var performanceResult = measurePerformance(()->findPrimes(primesUntil), 1);
-        
-        System.out.println("Java: Found " 
+        final var performanceResult = measurePerformance(()->findPrimesCstyle(primesUntil), 1);
+
+        System.out.println("Java: Found "
             + performanceResult.getResult().size()
-            + " primes until " 
-            + primesUntil 
-            + " in [" 
-            + performanceResult.getDuration() 
+            + " primes until "
+            + primesUntil
+            + " in ["
+            + performanceResult.getDuration()
             + " ms]");
     }
 
     /**
      * Implementation of the Sieve of Eratosthenes using Streams
-     * 
+     *
      * @param n
      * @return List with primes below n
      */
@@ -54,7 +52,7 @@ public class Algos {
     /**
      * Implementation of the Sieve of Eratosthenes using Streams and BitSet
      * for storing the sieve
-     * 
+     *
      * @param n
      * @return List with primes below n
      */
@@ -77,7 +75,7 @@ public class Algos {
     /**
      * Old school C-style implementation of the Sieve of Eratosthenes
      * @param n
-     * 
+     *
      * @return List with primes below n
      */
     public static List<Integer> findPrimesCstyle(final int n) {

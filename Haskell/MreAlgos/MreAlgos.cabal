@@ -34,7 +34,7 @@ library
       src
   build-depends:
       array
-    , base >=4.7 && <5
+    , base >=4.14 && <5
     , timeit
   default-language: Haskell2010
 
@@ -48,7 +48,7 @@ executable MreAlgos-exe
   build-depends:
       MreAlgos
     , array
-    , base >=4.7 && <5
+    , base >=4.14 && <5
     , timeit
   default-language: Haskell2010
 
@@ -63,6 +63,6 @@ test-suite MreAlgos-test
   build-depends:
       MreAlgos
     , array
-    , base >=4.7 && <5
+    , base >=4.14 && <5
     , timeit
   default-language: Haskell2010

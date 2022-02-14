@@ -1,12 +1,12 @@
-val dottyVersion = "0.22.0-RC1"
+val scala3Version = "3.1.1"
 
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "dotty-simple",
-    version := "0.1.0",
+    name := "MreAlgos",
+    version := "0.1.0-SNAPSHOT",
 
-    scalaVersion := dottyVersion,
+    scalaVersion := scala3Version,
 
     libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
   )

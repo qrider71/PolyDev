@@ -1,7 +1,6 @@
 pub fn find_primes(n: usize) -> Vec<usize> {
     let mut a = vec![false; n];
-    let mut primes = Vec::new();
-    primes.push(2);
+    let mut primes = vec![2];
     for i in (3..n).step_by(2) {
         if !a[i] {
             primes.push(i);

@@ -7,7 +7,7 @@ fun findPrimesNonRec (n: Int) : List<Int> {
     val maxIndexSqrt:Int = (sqrt(n*1.0)).toInt()
     var a = BooleanArray(n) { true }
     for (i in 4 until n step 2) a[i] = false
-    for (i in 3 until maxIndexSqrt step 2) { 
+    for (i in 3 until maxIndexSqrt step 2) {
         if (a[i]) {
             for (j in i*i until n step 2*i) {
                 a[j] = false

@@ -1,7 +1,6 @@
 package com.mre.polydev.algos
 
 import scala.math.sqrt
-import scala.collection.mutable.MutableList
 import scala.collection.mutable.ListBuffer
 
 object Algos {
@@ -9,14 +8,12 @@ object Algos {
     def filterSieve(p:Int, a:Array[Boolean]):Array[Boolean] = {
       for (i <- p*p until n by 2*p) a(i) = false
       a
-    } 
+    }
 
-    def sieve (p:Int, a:Array[Boolean]) : Seq[Int] = 
-      (p,a) match {
-        case (p,a) if p * p > n => for (i <- 2 until n if a(i)) yield i
-        case (p,a) if a(p)  => sieve ( (p+2), filterSieve (p, a) ) 
-        case _ => sieve ((p+2), a)
-      }
+    def sieve (p:Int, a:Array[Boolean]) : Seq[Int] =
+        if (p * p > n) for (i <- 2 until n if a(i)) yield i
+        else if (a(p)) sieve ( (p+2), filterSieve (p, a) )
+        else sieve ((p+2), a)
 
     var a = Array.fill(n) {true}
     for (i <- 4 until n by 2) a(i) = false
